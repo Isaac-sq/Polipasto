@@ -6,214 +6,167 @@
 <title>Sistema de Poleas</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 <style>
+
+.container p,
+.container ul li {
+text-align: justify;
+}
 :root {
---primary-dark: #2c3e50;
---secondary-blue: #3498db;
---light-grey: #ecf0f1;
---text-color: #34495e;
---border-color: #bdc3c7;
---white: #ffffff;
+  --primary-dark: #2c3e50;
+  --secondary-blue: #3498db;
+  --light-grey: #ecf0f1;
+  --text-color: #34495e;
+  --border-color: #bdc3c7;
+  --white: #ffffff;
 }
 
-body {
-font-family: 'Roboto', sans-serif;
-background-color: var(--light-grey);
-color: var(--text-color);
-line-height: 1.6;
-margin: 0;
-padding: 0;
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+.animated-background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(-45deg, #2c3e50, #3498db, #ecf0f1, #2c3e50);
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .header {
-background-color: var(--primary-dark);
-color: var(--white);
-padding: 1.5rem 2rem;
-display: flex;
-justify-content: space-between;
-align-items: center;
-font-family: 'Montserrat', sans-serif; 
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-flex-wrap: wrap; 
+  background-color: rgba(44, 62, 80, 0.85);
+  color: var(--white);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  flex-wrap: wrap;
 }
 
 .header h1 {
-margin: 0;
-font-size: 2.2rem;
-font-weight: 700;
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
 }
 
 .nav-links a {
-color: var(--white);
-margin-left: 1.5rem;
-text-decoration: none;
-font-size: 1.05rem;
-padding: 0.6rem 1rem;
-border-radius: 5px;
-transition: background-color 0.3s ease, transform 0.3s ease;
-font-weight: 500;
+  color: var(--white);
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-size: 1.05rem;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 500;
 }
 
 .nav-links a:hover {
-background-color: var(--secondary-blue);
-transform: translateY(-2px);
+  background-color: var(--secondary-blue);
+  transform: translateY(-2px);
 }
 
 .container {
-max-width: 1100px;
-margin: 2.5rem auto;
-background: var(--white);
-padding: 2.5rem;
-border-radius: 10px;
-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-margin-top: 2.5rem;
-padding-top: 1.5rem;
-border-top: 1px solid var(--border-color);
-font-weight: 600;
-color: var(--primary-dark);
-font-size: 1.9rem;
-font-family: 'Montserrat', sans-serif;
-}
-
-p {
-margin-bottom: 1rem;
-font-size: 1.05rem;
-}
-
-ul {
-margin-bottom: 1rem;
-padding-left: 1.5rem; 
-}
-
-ul li {
-margin-bottom: 0.5rem;
-font-size: 1.05rem;
-}
-
-hr {
-margin: 2rem 0;
-border: none;
-border-top: 1px solid var(--border-color);
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  font-weight: 600;
+  color: var(--primary-dark);
+  font-size: 1.9rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .sidebar {
-background: var(--white); 
-padding: 1.5rem;
-border-radius: 8px;
-position: sticky;
-top: 2rem; 
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); 
-border: 1px solid var(--border-color);
-}
-
-.index-title {
-color: var(--primary-dark);
-font-weight: 700;
-margin-bottom: 1rem;
-font-size: 1.2rem;
-border-bottom: 2px solid var(--secondary-blue); 
-padding-bottom: 0.5rem;
-}
-
-.index-list {
-list-style: none;
-padding-left: 0;
-}
-
-.index-list li {
-margin-bottom: 0.7rem;
-position: relative;
-padding-left: 1.5rem;
-}
-
-.index-list li::before {
-content: '\2022'; 
-position: absolute;
-left: 0;
-color: var(--secondary-blue); 
-font-size: 1.2rem;
-line-height: 1;
-font-weight: bold;
-}
-
-.index-list a {
-text-decoration: none;
-color: var(--text-color);
-transition: color 0.3s ease, border-bottom 0.3s ease;
-border-bottom: 1px solid transparent; 
-}
-
-.index-list a:hover {
-color: var(--secondary-blue);
-border-bottom: 1px solid var(--secondary-blue);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 8px;
+  position: sticky;
+  top: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
 }
 
 footer {
-text-align: center;
-padding: 1.5rem;
-color: var(--text-color);
-margin-top: 3rem;
-font-size: 0.9em;
-background: var(--light-grey);
-border-top: 1px solid var(--border-color);
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--text-color);
+  margin-top: 3rem;
+  font-size: 0.9em;
+  background: rgba(236, 240, 241, 0.9);
+  border-top: 1px solid var(--border-color);
 }
 
 @media (max-width: 768px) {
-.header {
-flex-direction: column;
-padding: 1.5rem 1rem;
-text-align: center;
-}
-
-.header h1 {
-margin-bottom: 1rem;
-font-size: 1.8rem;
-}
-
-.nav-links {
-margin-top: 1rem;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-}
-
-.nav-links a {
-margin: 0.5rem 0.8rem;
-}
-
-.container {
-margin: 1.5rem auto;
-padding: 1.5rem;
-}
-
-h2 {
-font-size: 1.7rem;
-margin-top: 2rem;
-padding-top: 1rem;
-}
-
-.sidebar {
-margin-top: 2rem;
-position: static;
-}
+  .header {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+  .header h1 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  .nav-links {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav-links a {
+    margin: 0.5rem 0.8rem;
+  }
+  .container {
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+  }
+  .sidebar {
+    margin-top: 2rem;
+    position: static;
+  }
 }
 </style>
 </head>
 <body>
 
+<div class="animated-background"></div>
+
 <div class="header">
-<h1>Sistema de Poleas</h1>
-<div class="nav-links">
-<a href="index.html">Inicio</a>
-<a href="simuladores.html">Simuladores</a>
-<a href="videos.html">¿Cómo armar el sistema?</a>
-</div>
+  <h1>Sistema de Poleas</h1>
+  <div class="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="simuladores.html">Simuladores</a>
+    <a href="videos.html">¿Cómo armar el sistema?</a>
+  </div>
 </div>
 
 <div class="container">
-<div class="row">
+  <div class="row">
 <div class="col-md-8">
 <p>Te explicamos qué es una polea, cuál es su historia, los tipos que existen y las partes que la componen, facilitando tu aprendizaje de forma clara y estructurada.</p>
 
@@ -275,8 +228,9 @@ position: static;
 </div>
 
 <footer>
-© 2025 Sistema de Poleas - Página educativa
+  © 2025 Sistema de Poleas - Página educativa
 </footer>
 
 </body>
 </html>
+
