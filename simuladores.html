@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Simuladores de Poleas</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+body { font-family: 'Georgia', serif; background-color: #f9f9f9; color: #1b263b; }
+.header {
+  background-color: #1b263b; color: white; padding: 30px 20px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.header h1 { margin: 0; font-size: 2rem; }
+.nav-links a {
+  color: white; margin-left: 15px; text-decoration: none;
+  font-size: 1.05rem; padding: 8px 12px; border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.nav-links a:hover {
+  background-color: #0d6efd; transform: scale(1.05);
+}
+.container {
+  max-width: 900px; margin: 30px auto; background: white;
+  padding: 30px; border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.sim-img {
+  width: 100%; max-width: 500px;
+  border-radius: 12px; margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+.sim-img:hover { transform: scale(1.05); }
+.btn-primary {
+  background-color: #1b263b; border-color: #1b263b;
+  border-radius: 25px; font-size: 0.95rem;
+}
+.btn-primary:hover {
+  background-color: #0d6efd; border-color: #0d6efd;
+}
+footer {
+  text-align: center; padding: 20px; color: #415a77;
+  margin-top: 40px; font-size: 0.9em;
+  background: #f0f4f8; border-top: 1px solid #cdd5e0;
+}
+footer a { color: #415a77; text-decoration: none; }
+footer a:hover { color: #0d6efd; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Simuladores de Poleas</h1>
+  <div class="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="simuladores.html">Simuladores</a>
+    <a href="videos.html">¿Cómo armar el sistema?</a>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Simulador Interactivo de Poleas Fijas</h2>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrtKKTC8e3qG0ZQ3HCK4Jb1F_NolZ6F1cS_P_vG7jvjmvNdUHL" alt="Simulador Poleas" class="sim-img">
+  <p>Explora poleas fijas, móviles y polipastos de forma interactiva para comprender su funcionamiento de manera práctica.</p>
+  <a href="https://stemonline.tech/es/fisica/poleas/" target="_blank" class="btn btn-primary">Ir al simulador de Poleas Fijas</a>
+</div>
+
+<div class="container">
+  <h2>Simulador Interactivo de Poleas</h2>
+  <img src="data:image/png;base64,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" alt="Simulador Poleas" class="sim-img">
+  <p>Simula el comportamiento de sistemas de poleas y comprende cómo se distribuyen las fuerzas.</p>
+  <a href="https://stemonline.tech/es/fisica/poleas/" target="_blank" class="btn btn-primary">Ir al simulador de Poleas</a>
+</div>
+
+<footer>
+  © 2025 Simuladores de Poleas - Página educativa | <a href="index.html">Volver al inicio</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sistema de Poleas</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+body { font-family: 'Georgia', serif; background-color: #f9f9f9; color: #1b263b; line-height: 1.8; }
+.header {
+  background-color: #1b263b; color: white; padding: 30px 20px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.header h1 { margin: 0; font-size: 2rem; }
+.nav-links a {
+  color: white; margin-left: 15px; text-decoration: none;
+  font-size: 1.05rem; padding: 8px 12px; border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.nav-links a:hover {
+  background-color: #0d6efd; transform: scale(1.05);
+}
+.container {
+  max-width: 1000px; margin: 20px auto; background: white;
+  padding: 30px; border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+h2 {
+  margin-top: 40px; padding-top: 20px;
+  border-top: 2px solid #415a77; font-weight: 600;
+}
+p { margin-bottom: 20px; }
+ul { margin-bottom: 20px; }
+.sidebar {
+  background: #e0e5ec; padding: 20px;
+  border-radius: 10px; position: sticky; top: 20px;
+}
+.index-title {
+  color: #1b263b; font-weight: 600;
+  margin-bottom: 15px; font-size: 1.1rem;
+}
+.index-list { list-style: none; padding-left: 0; }
+.index-list li {
+  margin-bottom: 10px; position: relative; padding-left: 20px;
+}
+.index-list li::before {
+  content: '•'; position: absolute; left: 0;
+  color: #1b263b; font-size: 18px; line-height: 1;
+}
+.index-list a {
+  text-decoration: none; color: #1b263b;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
+}
+.index-list a:hover {
+  color: #0d6efd; border-bottom: 2px solid #0d6efd;
+}
+footer {
+  text-align: center; padding: 20px; color: #415a77;
+  margin-top: 40px; font-size: 0.9em;
+  background: #f0f4f8; border-top: 1px solid #cdd5e0;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Sistema de Poleas</h1>
+  <div class="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="simuladores.html">Simuladores</a>
+    <a href="videos.html">¿Cómo armar el sistema?</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <p>Te explicamos qué es una polea, cuál es su historia, los tipos que existen y las partes que la componen, facilitando tu aprendizaje de forma clara y estructurada.</p>
+
+      <h2 id="que-es-polea">¿Qué es una polea?</h2>
+      <p>Se conoce como polea a una máquina simple diseñada para transmitir fuerza y operar como un mecanismo de tracción, reduciendo la cantidad de fuerza necesaria para mover o suspender en el aire un peso. Consiste en una rueda que gira sobre un eje central y provista de un canal en su periferia por donde pasa una cuerda.</p>
+      <p>La polea puede definirse además como el punto de apoyo de una cuerda que se mueve en torno a él sin darle una vuelta completa; tal es la definición del científico francés Hatón de la Goupillière. Así, en uno de los extremos de dicha cuerda actúa una resistencia o peso, mientras en la otra una potencia o fuerza.</p>
+      <p>El uso de poleas es muy frecuente en la construcción, carga y descarga de vehículos y muchos otros ámbitos donde se requiere movilizar grandes pesos con menor fuerza. Por ejemplo, el mecanismo para extraer agua de un pozo consiste en un cubo atado a una cuerda que pasa a través de una polea, permitiendo subir el cubo con agua al tirar del extremo libre.</p>
+
+      <h2 id="que-es-polipasto">Historia de la polea</h2>
+      <p>No se sabe con certeza quién inventó la polea. Se atribuye su invención a Arquímedes, aunque podría haber sido solo un estudioso de su uso. Plutarco cuenta que Arquímedes afirmó al Rey de Siracusa que con una fuerza y un punto de apoyo podría mover cualquier peso, incluso el de la Tierra. Como demostración, llenó un barco con carga y pasajeros y, usando un sistema de poleas diseñado por él, tiró de una cuerda con facilidad, elevando el barco de forma estable.</p>
+
+      <h2 id="tipos-polea">Tipos de polea</h2>
+      <p>Existen dos formas de clasificar las poleas:</p>
+      <ul>
+        <li><strong>Según su desplazamiento:</strong> Poleas fijas (suspendidas de un punto fijo) y poleas móviles (un conjunto de dos poleas: una fija y otra móvil).</li>
+        <li><strong>Según su número:</strong> Poleas simples (una sola polea actuando) y poleas compuestas o combinadas (conjunto interconectado de varias poleas).</li>
+      </ul>
+
+      <h2 id="partes-polea">Partes de una polea</h2>
+      <p>Toda polea se compone de cuatro partes fundamentales:</p>
+      <ul>
+        <li><strong>Eje:</strong> La parte fija donde se inserta o suspende la polea y permite su giro libre.</li>
+        <li><strong>Llanta:</strong> La zona externa con la garganta por donde pasa la cuerda.</li>
+        <li><strong>Cuerpo:</strong> Parte media entre el cubo y la llanta, con brazos o nervios para facilitar el movimiento.</li>
+        <li><strong>Cubo:</strong> Parte interna de la polea (agujero cilíndrico) donde se acopla el eje.</li>
+      </ul>
+    </div>
+
+    <div class="col-md-4">
+      <div class="sidebar">
+        <div class="index-title">ÍNDICE</div>
+        <ul class="index-list">
+          <li><a href="#que-es-polea">¿Qué es una polea?</a></li>
+          <li><a href="#que-es-polipasto">Historia de la polea</a></li>
+          <li><a href="#tipos-polea">Tipos de polea</a></li>
+          <li><a href="#partes-polea">Partes de una polea</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2025 Sistema de Poleas - Página educativa
+</footer>
+
+</body>
+</html>
